@@ -8,7 +8,7 @@ vim.opt.mouse = 'a'
 
 -- Load plugin configurations
 require('plugins')
-require('config.colorscheme')
-require('config.filetree')
-require('config.autosave')
-require('config.treesitter')
+require('configs.colorscheme')
+require('configs.filetree')
+require('configs.autosave')
+require('configs.treesitter')

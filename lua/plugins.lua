@@ -14,6 +14,15 @@ return require('packer').startup(function(use)
     -- Language Server Protocol
     use 'neovim/nvim-lspconfig'
     
+    -- Mason for managing LSP servers, linters, and formatters
+    use {
+      'williamboman/mason.nvim',
+      config = function()
+        require('mason').setup()
+      end
+    }
+    use 'williamboman/mason-lspconfig.nvim' -- Bridge between Mason and nvim-lspconfig
+    
     -- Auto-saving
     use 'Pocco81/auto-save.nvim'
     
