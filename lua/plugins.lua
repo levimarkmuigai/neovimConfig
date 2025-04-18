@@ -1,4 +1,3 @@
--- ~/.config/nvim/lua/plugins.lua
 return require('packer').startup(function(use)
     -- Package manager
     use 'wbthomason/packer.nvim'
