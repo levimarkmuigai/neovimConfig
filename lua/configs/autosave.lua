@@ -1,5 +1,16 @@
-require('auto-save').setup({
-    execution_message = "AutoSave: saved at " .. vim.fn.strftime("%H:%M:%S"),
-    events = {"InsertLeave", "TextChanged"},
-    debounce_delay = 1000,
-  })
+local autosave = require('auto-save')
+
+local autosave_enabled = true
+
+function _G.ASToggle()
+  if autosave_enabled then
+    autosave.disable()
+    print("AutoSave: Disabled")
+  else
+    autosave.enable()
+    print("AutoSave: Enabled")
+  end
+  autosave_enabled = not autosave_enabled
+end
+
+vim.api.nvim_set_keymap('n', '<leader>as', ':lua ASToggle()<CR>', { noremap = true, silent = true })
