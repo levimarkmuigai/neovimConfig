@@ -1,11 +1,17 @@
+-- ~/.config/nvim/lua/config/statusline.lua
 require('lualine').setup({
-    options = {
-      theme = {
-        normal = {
-          a = { bg = '#1e2430', fg = '#4d9eff' },
-          b = { bg = '#252a35', fg = '#c0c7d1' },
-          c = { bg = '#1a1f2c', fg = '#8994b3' }
-        }
-      }
-    }
-  })
+  options = {
+    theme = 'onedark',
+    icons_enabled = true,
+    component_separators = { left = '', right = ''},
+    section_separators = { left = '', right = ''},
+  },
+  sections = {
+    lualine_a = {'mode'},
+    lualine_b = {'filename'},
+    lualine_c = {'fileformat'},
+    lualine_x = {'encoding', 'filetype'},
+    lualine_y = {'progress'},
+    lualine_z = {'location'}
+  }
+})
