@@ -21,7 +21,15 @@ return require('packer').startup(function(use)
         require('mason').setup()
       end
     }
-    use 'williamboman/mason-lspconfig.nvim' -- Bridge between Mason and nvim-lspconfig
+    use {
+      'williamboman/mason-lspconfig.nvim',
+      config = function()
+        require('mason-lspconfig').setup {
+          ensure_installed = { "jdtls", "gopls" }, -- Java and Go LSPs
+          automatic_installation = true,
+        }
+      end
+    }
     
     -- Auto-saving
     use 'Pocco81/auto-save.nvim'
