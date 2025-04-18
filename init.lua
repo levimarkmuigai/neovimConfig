@@ -12,3 +12,5 @@ require('configs.colorscheme')
 require('configs.filetree')
 require('configs.autosave')
 require('configs.treesitter')
+require('configs.statusline')
+vim.opt.showmode = false

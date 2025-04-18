@@ -31,4 +31,8 @@ return require('packer').startup(function(use)
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate'
     }
+
+    
+    use 'nvim-lualine/lualine.nvim'  -- Status line
+    use 'kyazdani42/nvim-web-devicons' -- File icons
   end)
