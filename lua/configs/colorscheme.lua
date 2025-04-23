@@ -5,7 +5,6 @@ require('onedark').setup({
   ending_tildes = false,
   cmp_itemkind_reverse = false,
 
-  -- Your customized palette
   colors = {
     bg0    = '#1a1f2c',
     bg1    = '#222733',
@@ -17,22 +16,22 @@ require('onedark').setup({
     yellow = '#e5c07b',
   },
 
-  -- Merge UI tweaks and syntax highlights here
   highlights = {
-    -- UI elements
-    CursorLine       = { bg = '#252a35' },
-    Visual           = { bg = '#2d3343' },
-    LineNr           = { fg = '#5b6370' },
-    CursorLineNr     = { fg = '#4d9eff' },
+    -- UI tweaks 
+    CursorLine    = { bg = '#252a35' },
+    Visual        = { bg = '#2d3343' },
+    LineNr        = { fg = '#5b6370' },
+    CursorLineNr  = { fg = '#4d9eff' },
 
-    -- Tree‑sitter / LSP-based syntax groups
-    ["@function"]    = { fg = "#61AFEF" },
-    ["@keyword"]     = { fg = "#E06C75", bold = true },
-    ["@string"]      = { fg = "#98C379" },
-    ["@variable"]    = { fg = "#D19A66" },
+    -- Extracted palette
+    ["@comment"]   = { fg = "#5C6370", italic = true },
+    ["@keyword"]   = { fg = "#61AFEF", bold = true },
+    ["@string"]    = { fg = "#98C379" },
+    ["@number"]    = { fg = "#D19A66" },
+    ["@constant"]  = { fg = "#E06C75" },
+    ["@operator"]  = { fg = "#56B6C2" },
   },
 
-  -- Optionally customize code‑style too
   code_style = {
     comments  = 'italic',
     keywords  = 'none',
@@ -48,6 +47,5 @@ require('onedark').setup({
   },
 })
 
--- Finally, apply the theme:
 require('onedark').load()
 
