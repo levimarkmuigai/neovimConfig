@@ -89,7 +89,7 @@ require('onedark').setup({
   ending_tildes = false,
   cmp_itemkind_reverse = false,
 
-  -- exact base palette from your screenshot
+  -- toggle theme style ---
   colors = {
     bg0    = '#0e0a00',
     bg1    = '#100c05',
